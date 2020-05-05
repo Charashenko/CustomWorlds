@@ -1,0 +1,13 @@
+name: CustomWorlds
+version: ${project.version}
+main: me.charashenko.customworlds.CustomWorlds
+api-version: 1.13
+authors: [Charashenko]
+description: Plugin for Paper servers, offering a big variety of features for custom worlds, world creation/management, per world permissions and much more.
+depend: [Vault]
+commands:
+  food:
+    description: "Feed yourself"
+    usage: /<command> [player]
+    aliases:
+      - fd

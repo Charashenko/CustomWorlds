@@ -1,0 +1,24 @@
+#This is your server name, it will be used in welcome messages and when server makes some announcement.
+ServerName: '&8&l[&bMilky&9Way&8&l] &r'
+
+#Should PlayerWorlds display join messages? Format is: [ServerName] [Message Below] [PlayerName]
+JoinMessages: true
+JoinMessage: '&eWelcome to the server'
+
+#This is plugin name/prefix that will show before each plugin message.
+EnablePluginPrefix: true
+PluginPrefix: '&8[&6CustomWorlds&8] &r'
+
+#Set to true if you want to enable LAVA_BUCKET protection/info, players with permission (cw.lavabucket) will still be able to use it.
+LavaBucketProtection: true
+
+#Missing permissions message
+NoPermissionMessage: '&cYou do not have permission for this!'
+#Permissions list:
+# - cw.admin
+# - cw.build.<world>
+# - cw.build.*
+# - cw.use.<world>
+# - cw.use.*
+# - cw.food
+# - cw.lavabucket

@@ -34,9 +34,9 @@ public class WorldAddMember implements CommandExecutor {
             assert target != null;
             if (!player.getDisplayName().equals(target.getDisplayName())) {
                     if (!target.hasPermission("cw.build." + world) && !target.hasPermission("cw.use." + world)) {
-                        player.sendMessage(pluginPrefix + "You have successfully added " + ChatColor.BLUE + target.getDisplayName() + " to your world.");
+                        player.sendMessage(pluginPrefix + "You have successfully added player " + ChatColor.BLUE + target.getDisplayName() + " to your world.");
                         if (target.isOnline()) {
-                            target.sendMessage(pluginPrefix + "You have been added to world owned by " + ChatColor.GREEN + player.getDisplayName());
+                            target.sendMessage(pluginPrefix + "You have been added to the world owned by " + ChatColor.GREEN + player.getDisplayName());
                         }
                         if (!target.hasPermission("cw.build." + world)) {
                             permission.playerAdd(target, "cw.build." + world);
@@ -45,10 +45,10 @@ public class WorldAddMember implements CommandExecutor {
                             permission.playerAdd(target, "cw.use." + world);
                         }
                     } else {
-                        player.sendMessage(pluginPrefix + "Player " + ChatColor.GREEN + player.getDisplayName() + " is already added to your world.");
+                        player.sendMessage(pluginPrefix + "Player " + ChatColor.GREEN + player.getDisplayName() + " is already a member of your world.");
                     }
                 } else {
-                    player.sendMessage(pluginPrefix + ChatColor.RED + "You can no add yourself because you are owner of this world.");
+                    player.sendMessage(pluginPrefix + ChatColor.RED + "You can`t add yourself to your own world.");
                 }
                 return true;
         } else {
